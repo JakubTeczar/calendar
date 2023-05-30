@@ -1,0 +1,97 @@
+.menu
+    position: absolute
+    right: 50px
+    top: 15px
+    width: 48vw 
+    height: 60px
+    color: white
+    font-size: 14px
+    display: flex
+    overflow: hidden
+    z-index: -1
+    justify-content: space-around
+    align-items: center
+    transition: transform .2s
+    
+    &-calendary , &-entertainment , &-log-out ,&-learning
+        text-align: center
+        width: 100%
+        height: auto
+        text-transform: none
+        text-decoration: none
+        color: white
+        transition: .2s
+        &:hover
+            cursor: pointer
+    &-log-out
+        color: #50E89C 
+        text-align: center
+       
+.campany-name
+    position: absolute
+    color: white
+    font-size: 25px
+    padding-left: 30px
+    padding-top: 20px
+    letter-spacing: 2px
+    box-sizing: border-box
+
+.first-part
+    background: black
+    position: absolute
+    width: 100vw
+    height: 93vh
+    top: 0
+    left: 0
+    z-index: 0
+
+.active
+    top: 50px
+    right: 0px
+    width: 170px 
+    height: 150px
+    color: white
+    font-size: 14px
+    display: flex
+    flex-direction: column
+    background: rgba(0, 0, 0, 0.842)
+    z-index: 3
+    align-items: center
+    justify-content: center
+    justify-content: space-around
+    border-radius: 4px
+    border-top-left-radius: 0px
+    border-top-right-radius: 0px
+
+.hamburger
+    position: absolute
+    right: 85px
+    top: 10px
+    width: 170px
+    height: 40px
+    transform: translateX(50%)
+    // background: rgba(44, 44, 44, 0.945)
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: column
+    padding-top: 10px
+    transition: transform .2s
+    .line
+        width: 30px
+        height: 2px
+        background: white
+
+@media only screen and (min-width: 1100px)
+    .menu
+        width: 30vw 
+@media only screen and (max-width: 700px)
+    .menu
+        font-size: 12px
+
+@media only screen and (max-width: 600px)
+    .campany-name
+        font-size: 18px
+@media only screen and (max-width: 370px)
+    .campany-name
+        font-size: 16px

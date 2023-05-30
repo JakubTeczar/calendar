@@ -1,0 +1,58 @@
+
+
+.container
+    width: 100vw
+    height: calc( 20vh + 1000px )
+    position: absolute 
+    top: 35vh
+    left: 0px
+    .save-on-server
+        width: 110px
+        margin-left: 20px
+        height: 32px
+        color: orange 
+        font-weight: 500
+        font-size: 20px
+        text-transform: uppercase
+        background: #000000
+        padding-top: 4px 
+        transition: .2s
+        outline: none
+        border: 0px solid black
+        border-bottom: 3px solid white
+        display: inline
+        // border: 2px solid orange
+        &:hover
+            font-weight: 700
+            background: #ffffff
+            color: black
+            cursor: pointer
+
+
+    form
+        font-weight: 600
+        width: 80vw
+        margin: 0 auto
+        text-transform: uppercase
+        text-align: right
+        color: #ffffff
+        font-size: 20px
+        margin-bottom: 8px  
+
+
+    .lesson
+        // background: red
+        width: 80%
+        margin-left: auto
+        margin-right: auto
+        height: 70px
+        padding-left: 50px
+
+@media only screen and (max-width: 560px)
+    .container
+        .save-on-server
+            font-size: 16px
+        form
+            padding-right: 10%
+            width: 100vw
+            font-size: 16px

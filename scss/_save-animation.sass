@@ -1,0 +1,34 @@
+
+.save-animation
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+    z-index: 30
+    background: black
+    display: none
+    transform: translateY(0%)
+.appearSave-animation
+    display: block
+    opacity: 1
+    animation: appearSave-animation linear .9s forwards
+.cover
+    display: block
+    opacity: 0
+    animation: cover linear .25s forwards
+
+@keyframes appearSave-animation
+    0%
+    40%
+        opacity: 1
+        transform: translateY(0%)
+    100%
+        opacity: 1
+        transform: translateY(-100%)
+
+@keyframes cover
+    to 
+        opacity: 1
+        transform: translateY(0%)

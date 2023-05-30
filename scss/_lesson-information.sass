@@ -1,0 +1,71 @@
+.lesson-information-container
+    height: 155px
+    display: flex
+    justify-content: space-around
+    padding: 0 10%
+    padding-top: 20px
+    font-size: 30px
+    text-transform: uppercase
+    font-family: 'Bebas Neue', cursive
+    .current-time , .time-until-breakOrLesson , .next-lesson
+        position: relative
+        width: 300px
+        height: 60px
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 2
+        color: #1a2636
+        background: #f8f8f8
+        border-radius: 7px
+        -webkit-box-reflect: below 1px linear-gradient(transparent,#f3f3f34d,)
+        line-height: .7em
+        box-shadow: 0 0 10px #cfcfcf9a,0 0 20px #f3f3f34d,0 0 40px #f3f3f34d,0 0 80px #f3f3f34d,0 0 160px #f3f3f34d
+        .comment
+            text-transform: lowercase
+            color: #507180
+            transform: translateX(-50%)
+            position: absolute
+            bottom: 1px
+            left: 50%
+            font-size: 16px
+.flexible-enter
+    display: inline
+    width: 0px
+
+@media only screen and (max-width: 1250px)
+    .lesson-information-container
+        font-size: 20px
+        .current-time , .time-until-breakOrLesson , .next-lesson
+            width: 200px
+            .comment
+                font-size: 13px
+@media only screen and (max-width: 800px)
+    .flexible-enter
+        display: block
+    .lesson-information-container
+        font-size: 20px
+        padding: 0 8%
+        padding-top: 50px
+        .current-time , .time-until-breakOrLesson , .next-lesson
+            width: 140px
+            height: 45px
+     
+            .comment
+                width: 95%
+                margin: 0 auto
+                text-align: center
+                font-size: 13px
+@media only screen and (max-width: 560px)
+    .lesson-information-container
+        height: 17vh
+        padding: 0 5%
+        padding-top: 20px
+        font-size: 16px
+        .current-time , .time-until-breakOrLesson , .next-lesson
+            width: 100px
+            height: 40px
+            .result
+                font-size: 15px
+            .comment
+                font-size: 11px

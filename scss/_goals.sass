@@ -1,0 +1,318 @@
+.useful-container
+    background: black
+    width: 100%
+    height: 70vh
+    position: relative
+    box-sizing: border-box
+    display: flex
+    font-family: 'Noto Sans JP', sans-serif
+    overflow: hidden
+    &::before ,&::after
+        position: absolute
+        content: ""
+        background: #ffffff
+        width: 150%
+        height: 200px
+        top: -140px
+        left: -15%
+        transform: rotate(-4.5deg)
+    &::after
+        width: 3px
+        height: 100%
+        top: 0px
+        left: 50%
+        transform: translateX(-50%)
+    .link-container
+        width: 50%
+        height: 100%
+        // background: #ffffff49
+        padding-top: 20vh
+        .link-top-panel
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            padding-right: 10px
+            .link-title
+                font-family: 'Nunito', sans-serif
+                font-size: 24px
+                color: white
+                padding-left: 20px
+            .add-new-link-container
+                padding-left: 40px
+                display: flex
+                justify-content: space-around
+                
+                .form
+                    height: 60px
+                    width: 38%
+                    margin: 0
+                    box-sizing: content-box
+                    input
+                        background: black
+                        font-size: 18px
+                        font-family: 'Nunito', sans-serif
+                        &:focus + .label-name .content-name , &:valid + .label-name .content-name
+                            color: #f8f8f8
+                            transform: translateY(-140%)
+                            padding: 0
+
+                        &:focus + .label-name::after , &:valid + .label-name::after
+                            border-color:#e9e9e9
+                        label        
+                            &::after
+                                transform: translateX(-102%)
+                                border-bottom: 4px solid #e9e9e9
+                    .new-link
+                        font-size: 16px
+                    .label-name
+                        box-sizing: content-box
+                        color: white
+                        background: transparent
+                        baorder-color: yellow
+                        .content-name
+                            text-transform: none
+                            background: transparent
+                            left: 1px
+                            font-size: 14px
+            .add-newLink-button
+                width: 40px
+                height: 40px
+                border-radius: 50%
+                align-self: flex-end
+                border: 2px solid white
+                background: transparent
+                font-weight: 100
+                position: relative
+                transition: transform .4s ,background .6s
+                &::after , &::before
+                    content: ''
+                    position: absolute
+                    width: 2px
+                    height: 22px
+                    background: black
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%,-50%)
+                    background: white
+                &::before
+                    width: 22px
+                    height: 2px
+                &:hover 
+                    cursor: pointer
+                    transform: rotate(90deg)
+                    background: #3d3c3c
+               
+
+        .link-list
+            font-family: 'Nunito', sans-serif
+            width: 100%
+            height: calc( 100% - ( 4vh+7vh )
+            overflow: auto
+            height: 200px   
+            display: block             
+            width: 90%
+            padding-left: 20px 
+            margin: 0 auto 
+            margin-top: 20px 
+            .link:first-child
+                margin-top: 10px
+            .link
+                display: flex
+                align-items: center
+                padding-left: 15px
+                margin-bottom: 30px
+                position: relative
+                overflow: hidden
+                padding-bottom: 2px
+                width: 80%
+                &:hover .remove-list-button
+                    transform: translateY(0%) 
+                &::before ,.belt
+                    position: absolute
+                    content: ""
+                    bottom: 0px
+                    right: 0px
+                    width: 100%
+                    height: 1px
+                    background: white 
+                .belt
+                    width: 0%
+                    background: #c7c7c7
+                    left: 0
+                    height: 3px
+                    transition: .3s
+                &:hover .belt
+                    width: 100%
+                    background: #e7e7e7
+                a
+                    text-decoration: none
+                    color: #e9e9e9
+                    font-size: 20px
+                .remove-list-button
+                    position: absolute
+                    bottom: 0
+                    right: 0
+                    background: transparent  
+                    border: 0    
+                    padding-bottom: 3px
+                    color: #ff1414     
+                    text-transform: uppercase
+                    font-size: 15px
+                    font-weight: 500
+                    transform: translateY(100%)   
+                    transition: .4s
+                    font-family: 'Azeret Mono', monospace
+                    font-style: italic
+                    &:hover
+                        cursor: pointer
+    .goal-container
+        @extend .link-container
+        .goal-top-panel
+            @extend .link-top-panel
+            .goal-title
+                @extend .link-title
+            .add-new-goal-container
+                @extend .add-new-link-container
+                width: 80%
+                padding-left: 10px
+            .add-newGoal-button
+                @extend .add-newLink-button
+                margin-right: 15px    
+            .input-container
+                display: flex
+                width: 190px
+                align-items: flex-end
+                position: relative
+                &::after
+                    content: 'Podaj date'
+                    position: absolute
+                    top: 14px
+                    left: -20px
+                    color: white
+                    font-size: 12px
+                    height: 16px
+                .input-goal-time
+                    color: white
+                    width: 60px
+                    font-size: 15px
+                    font-style: italic
+                    color: #50E89C
+                .input-goal-time::-webkit-calendar-picker-indicator
+                    background: none
+                    display: none
+
+                input
+                    width: 28px
+                    height: 30px
+                    text-align: center
+                    background: transparent
+                    border: none
+                    color: white
+                    transition: border .2s
+                    border-bottom: 2px solid transparent
+                    &:last-child
+                        width: 42px
+                    &:focus
+                        border-bottom: 2px solid white
+                        outline: none
+                
+        .goal-list  
+            @extend .link-list   
+            .goal
+                height: 55px
+                width: 98%
+                position: relative
+                padding: 0 25px
+                .date-conteiner
+                    // background: #1996cfa9 
+                    position: absolute
+                    bottom: 0
+                    right: 0
+                    width: 100%
+                    height: 23px
+                    font-size: 16px
+                    display: flex
+                    justify-content: space-between
+                    color: white
+                .goal-top-container
+                    width: 100%
+                    height: 30px
+                    position: relative
+                    .goal-title
+                        color: white
+                        width: calc( 100% - 145px  )
+                    .belt
+                        width: 100%
+                        position: absolute
+                        bottom: 0
+                        right: 0
+                        height: 2px
+                        background: white
+                        .fat-belt
+                            position: absolute
+                            content: ''
+                            top: 0px
+                            left: 0px
+                            background: #50E89C
+                            height: 4px
+                            width: 0%
+                            transform: translateY(-1px)
+                    .remove-goal-button , .check-goal
+                        background-image: url(../trash.png)
+                        background-size: contain
+                        background-repeat: no-repeat
+                        width: 25px
+                        height: 20px
+                        position: absolute
+                        text-decoration: none
+                        border: 0px solid black
+                        opacity: 1
+                        position: absolute
+                        top: 3px
+                        right: 40px
+                        outline: none
+                        display: none
+                        transition: transform .2s
+                        &:hover
+                            transform: scale(1.1)
+                            cursor: pointer
+
+                    .check-goal
+                        right: 73px
+                        font-size: 18px
+                        top: 0px
+                        background: #02020000
+                    .gear-goal
+                        @extend .remove-goal-button 
+                        display: block
+                        height: 22px
+                        width: 22px
+                        right: 5px
+                        padding-top: 0px
+                        background-image: url(../WhiteGear.png)
+                        &:hover
+                            transform: rotate(90deg)
+                            cursor: pointer
+                    .active-goal-div
+                        display: block
+                    .time-to-end
+                        @extend .remove-goal-button 
+                        background: transparent
+                        width: 100px
+                        right: 30px
+                        text-align: center
+                        color: #50E89C
+                        &::after
+                            width: 2px
+                            height: 23px
+                            background: white
+                            position: absolute
+                            content: ''
+                            position: absolute
+                            top: -1px
+                            left: -10px
+                            transform: rotate(25deg)
+                        &:hover
+                            transform: translateY(0px)
+                            cursor: default
+             

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACX,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,GAAG;CAAG",
+    "sources": [
+        "goals.sass"
+    ],
+    "names": [],
+    "file": "goals.css"
+}

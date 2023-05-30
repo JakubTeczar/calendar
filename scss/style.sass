@@ -1,0 +1,103 @@
+@import "./_animation"
+@import "./_save-animation"
+@import "./_top-panel"
+@import "./_main-part"
+@import "./_calendary"
+@import "./_lesson"
+@import "./_inputAnimation"  
+@import "./_goal-information"  
+@import "./_goals"  
+@import "./_lesson-information"  
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+body
+    background: white
+    margin: 0
+    padding: 0
+    overflow-x: hidden
+    // overflow: hidden
+    font-family: 'Noto Sans JP', sans-serif
+form
+    input
+        display: none
+::-webkit-scrollbar 
+    width: 7px
+    position: absolute
+::-webkit-scrollbar-track 
+    border-left: 2px solid rgb(246, 246, 246)
+
+::-webkit-scrollbar-thumb 
+    background: #161616f8
+    --webkit-box-shadow: inset 0 0 6px #dbc1c1
+
+::-webkit-scrollbar-thumb:hover 
+    background: #8f8f8f5e
+    --webkit-box-shadow: inset 0 0 6px #383838
+
+::-webkit-scrollbar-thumb:window-inactive 
+    border-left: 2px solid #575454
+
+.save-data-on-server
+    position: fixed
+    width: 250px
+    height: 40px
+    background: #f3f1f1b9
+    bottom: 10vh
+    left: 0px
+    display: flex
+    z-index: 10
+    border-top-right-radius: 8px 
+    border-bottom-right-radius: 8px 
+    transition: background .2s ,transform .3s
+    transform: translateX(-210px)
+    &:hover
+        cursor: pointer
+        background: #a5a5a8b9
+        transform: translateX(0px)
+    &-message
+        width: calc( 100% - 40px )
+        font-size: 14px
+        font-weight: 800
+        padding-top: 8px
+        padding-left: 5px
+    &-icon
+        width: 40px
+        height: 100%
+        font-size: 23px
+        text-align: center
+        border-top-right-radius: 8px 
+        border-bottom-right-radius: 8px 
+        background: #caf50b
+    // width: 5px
+// [data-title]
+//     position: relative
+//     z-index: 100
+
+// [data-title]:hover::after
+//     z-index: 100
+//     content: attr(data-title)
+//     position: absolute
+//     top: -30px
+//     left: 6px
+//     padding-bottom: 4px
+//     background-color: rgb(15, 43, 70)
+//     color: white
+//     padding: 5px
+//     border-radius: 10px
+//     width: 150px
+//     overflow: hidden
+    
+
+// [data-title]:hover::before
+//     z-index: 100
+//     content: ''
+//     border-top: 10px solid rgb(15, 43, 70)
+//     border-left: 20px solid transparent
+//     border-right: 20px solid transparent
+//     position: absolute
+//     top: -4px
+//     left: 60px
+//     height: 10px
+ 
